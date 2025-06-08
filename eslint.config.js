@@ -1,20 +1,3 @@
-// import js from "@eslint/js";
-// import globals from "globals";
-// import pluginReact from "eslint-plugin-react";
-// import { defineConfig } from "eslint/config";
-
-// export default defineConfig([
-//   {
-//     files: ["**/*.{js,mjs,cjs,jsx}"],
-//     plugins: { js },
-//     extends: ["js/recommended"],
-//   },
-//   {
-//     files: ["**/*.{js,mjs,cjs,jsx}"],
-//     languageOptions: { globals: globals.browser },
-//   },
-//   pluginReact.configs.flat.recommended,
-// ]);
 import js from "@eslint/js";
 import globals from "globals";
 import pluginReact from "eslint-plugin-react";
@@ -22,6 +5,9 @@ import { defineConfig } from "eslint/config";
 import babelParser from "@babel/eslint-parser";
 
 export default defineConfig([
+  {
+    ignores: ["dist/**"], // <--- игнорируем папку dist
+  },
   {
     files: ["**/*.{js,jsx,mjs,cjs}"],
     languageOptions: {
