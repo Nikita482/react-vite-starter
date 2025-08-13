@@ -1,12 +1,21 @@
 import ReactDOM from "react-dom/client";
+import "./index.css";
+import "./app.scss";
+import styles from "./app.module.css";
 
-const App = () => {
+const Main = () => {
   return (
-    <div className="wrapper">
-      <h1>123</h1>
-      <h1>456git add</h1>
+    <div>
+      <h1 className="title1">123</h1>
+      <h1 className="title2">123</h1>
+      <h1 className={styles.title3}>123</h1>
+      <img
+        style={{ width: "200px", height: "200px" }}
+        src="public/foto.jpg"
+        alt="foto"
+      />
     </div>
   );
 };
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+ReactDOM.createRoot(document.getElementById("root")).render(<Main />);
